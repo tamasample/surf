@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css">
+  <link rel="stylesheet" type="text/css" href="css/styles03.css">
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- mobile -->
+  <div id="nav-toggle">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <p>MENU</p>
+    </div>
+  </div>
+  </div>
+
+  <div id="nav-background"></div>
+  <div id="mobile-nav">
+    <ul id="mobile-navmenu" class="mobile-navmenu">
+      <li><a href="#firstPage">Home</a></li>
+      <li><a href="#secondPage">Second</a></li>
+      <li><a href="#thirdPage">Third</a></li>
+      <li><a href="#fourthPage">Fourth</a></li>
+      <li><a href="#lastPage">Last</a></li>
+      <li> <a href="https://twitter.com/">Twitter<img class="mb-twitter" src="img/twittersvg.svg"></a> </li>
+      <li><a href="https://www.instagram.com/">Instagram<img class="mb-instagram" src="img/instagram.svg" alt=""></a>
+      </li>
+      <li> <a href="https://ja-jp.facebook.com/">facebook<img class="mb-facebook" src="img/facebook.svg" alt=""></a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="multiscroll">
+    <div class="ms-left">
+
+      <div class="ms-section" id="left1">
+        <div>
+          <h1>Surfing.</h1>
+        </div>
+      </div>
+      <div class="ms-section" id="left2">
+
+        <div>
+          <h1>Waves.</h1>
+        </div>
+      </div>
+      <div class="ms-section" id="left3">
+        <div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reiciendis, dolorem autem ratione
+            maxime eveniet omnis quo unde, nostrum ipsam quasi quod et, veniam perspiciatis quaerat libero ab vitae
+            aperiam?</p>
+        </div>
+      </div>
+      <div class="ms-section" id="left4">
+        <div>
+          <h1>Sunshine.</h1>
+        </div>
+      </div>
+      <div class="ms-section" id="left5">
+        <div>
+          <p>I picture something is beautiful<br>
+            It's full of life and it is all blue<br>
+            I've seen the sunset on the beach,<br>
+            It makes me feel calm
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="ms-right">
+      <div class="ms-section" id="right1">
+        <div>
+          
+        </div>
+        <p>Can't live without you.</p>
+      </div>
+      <div class="ms-section" id="right2">
+
+        <div>
+          <img src="img/surfboard.svg" alt="">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reiciendis, dolorem autem ratione
+            maxime eveniet omnis quo unde, nostrum ipsam quasi quod et, veniam perspiciatis quaerat libero ab vitae
+            aperiam?</p>
+        </div>
+
+      </div>
+      <div class="ms-section" id="right3">
+        <div>
+          <h1>Peace.</h1>
+        </div>
+      </div>
+      <div class="ms-section" id="right4">
+        <div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores reiciendis, dolorem autem ratione
+            maxime eveniet omnis quo unde, nostrum ipsam quasi quod et, veniam perspiciatis quaerat libero ab vitae
+            aperiam?</p>
+          <img src="img/wave.svg" alt="">
+        </div>
+      </div>
+      <div class="ms-section" id="right5">
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="js/jquery.multiscroll.min.js"></script>
+  <script>
+    $(function () {
+      $('#myContainer').multiscroll({
+        navigation: true,
+        menu: '#menu',
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+        afterLoad: function(anchorLink, index){
+			//using index
+			if(index == '3'){
+				$('#nav-toggle span').css('background','rgba(255, 255, 255, 0.8)');
+        $('#nav-toggle p').css('color','rgba(255, 255, 255, 0.8)');
+        $('#nav-toggle').css('border','solid 1px rgba(255, 255, 255, 0.8)');
+			}else{
+        $('#nav-toggle span').css('background','rgb(90, 89, 89)');
+        $('#nav-toggle p').css('color','rgb(90, 89, 89)');
+        $('#nav-toggle').css('border','solid 1px rgb(90, 89, 89)');
+      }
+		}
+      });
+    });
+
+    $(function () {
+      $('#nav-toggle').on('click', function () {
+        $('body').toggleClass('open');
+      });
+    });
+
+    
+  
+  </script>
+</body>
+
+</html>
