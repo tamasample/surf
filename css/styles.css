@@ -28,8 +28,10 @@ p {
 }
 
 #left1,
-#right1 {
-  background: #f5f1df;
+#right1,
+#left5,
+#right5{
+  background-color: #FAF5EC;
 }
 
 #left1>div {
@@ -86,7 +88,7 @@ p {
 
 #left2,
 #right2 {
-  background: #fae9bb;
+  background: #FAF5EC;
 }
 
 #left2>div {
@@ -166,7 +168,7 @@ p {
 
 #left4,
 #right4 {
-  background: #f7e1e5;
+  background: #FAF5EC;
 }
 
 
@@ -189,7 +191,7 @@ p {
   width: 30vw;
   padding: 4rem 3rem;
   margin: 0 auto;
-  background: #f7e1e5;
+  background: #FAF5EC;
   border-bottom: 2rem dashed gainsboro;
   margin-top: -10rem;
   opacity: 0.8;
