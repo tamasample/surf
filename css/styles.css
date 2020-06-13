@@ -297,12 +297,13 @@ p {
 .mobile-navmenu li a {
   color: #000;
   text-decoration: none;
-  padding: 1rem 6rem;
+  padding: 1rem 1rem 1rem 6rem;
   font-family: 'Reenie Beanie', cursive;
   cursor: pointer;
   vertical-align: middle;
   font-size: 3rem;
   transition: all .35s ease;
+  display:block;
 }
 
 .mobile-navmenu li a:hover,
