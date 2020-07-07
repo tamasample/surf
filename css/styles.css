@@ -92,7 +92,7 @@ p {
 }
 
 #left2>div {
-  background: center center repeat-y url(../img/waveunsplash.jpg);
+  background: center center no-repeat url(../img/waveunsplash.jpg);
 }
 
 
